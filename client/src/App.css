@@ -1,0 +1,300 @@
+/* Set root styles for variables used throughout CSS */
+:root {
+  --bg:  #414141; /* Set background color variable */
+  --text-color: #dadce1; /* Set text color variable */
+  --nav-size: 50px; /* Set navigation size variable */
+  --border-radius: 8px; /* Set border radius variable */
+  --speed: 500ms; /* Set animation speed variable */
+}
+
+/* Set global styles for the entire page */
+body {
+  background-color: var(--bg); /* Set background color */
+  -webkit-font-smoothing: antialiased; /* Set font smoothing */
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff; /* Set text color */
+  margin: 0;
+  padding: 0;
+  
+}
+
+/* Styles for links */
+a {
+  color: var(--text-color); /* Set link color */
+  text-decoration: none;;
+}
+
+/* ***************************************************** */
+/*                 NAVBAR CLASS START                      */
+/* ***************************************************** */
+
+/* Styles for navigation bar */
+.navbar {
+  position: relative; /* Set navbar to relative position */
+  height: var(--nav-size); /* Use nav size variable for height */
+  background-color: #454545; /* Use background color variable */
+  padding: 0 1rem;
+  border-bottom: var(--border); /* Use border radius variable */
+
+}
+
+/* Styles for navbar unordered list */
+.navbar-nav {
+  max-width: 100%;
+  height: 100%;
+  display: flex; /* Use flexbox to align content */
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  
+}
+
+/* Styles for navbar logo */
+.navbar-logo {
+  position: absolute; /* Set logo to absolute position */
+  left: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styles for navigation items */
+.nav-item {
+  width: calc(var(--nav-size) * 0.8);
+  display: flex; /* Use flexbox to align content */
+  align-items: center;
+  justify-content: center;
+}
+.nav-items-container {
+  display: flex; /* Use flexbox to align content */
+  /* align-items: center; */ 
+}
+
+/* Styles for logo button */
+.logo-button {
+  --button-size: calc(var(--nav-size) * 0.9); /* Set button size variable */
+  width: var(--button-size); /* Use button size variable for width */
+  height: var(--button-size); /* Use button size variable for height */
+  background-color: #414141;
+  border-radius: 50%;
+  padding: 2px;
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: filter 300ms;
+}
+/* Styles for logo button hover state */
+.logo-button:hover {
+  filter: brightness(1.2);
+}
+.logo-button svg { 
+  width: 50px;
+  height: 50px;
+}
+
+/* Styles for icon buttons */
+.icon-button {
+  --button-size: calc(var(--nav-size) * 0.5); /* Set button size variable */
+  width: var(--button-size); /* Use button size variable for width */
+  height: var(--button-size); /* Use button size variable for height */
+  background-color: #414141;
+  border-radius: 50%;
+  padding: 5px;
+  margin-right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: filter 300ms;
+}
+/* Styles for icon button hover state */
+.icon-button:hover {
+  filter: brightness(1.2);
+}
+.icon-button svg { 
+  width: 20px;
+  height: 20px;
+}
+.icon-right {
+  margin-left: auto;
+}
+
+/* Styles for dropdown menu */
+.dropdown {
+  position: absolute; /* Set dropdown to absolute position */
+  top: 58px;
+  width: 200px;
+  transform: translateX(-45%);
+  background-color: var(--bg); /* Use background color variable */
+  border: var(--border); /* Use border radius variable */
+  border-radius: var(--border-radius); /* Use border radius variable */
+  padding: 1rem;
+  overflow: hidden;
+  transition: height var(--speed) ease;
+}
+
+.menu {
+  width: 100%;
+}
+
+/* Styles for dropdown menu items */
+.menu-item {
+  height: 25px;
+  display: flex; /* Use flexbox to align content */
+  align-items: center;
+  border-radius: var(--border-radius); /* Use border radius variable */
+  transition: background var(--speed);
+  padding: 0.5rem;
+}
+
+.menu-item-text {
+  flex-grow: 1;
+  text-align: right;
+}
+
+/* Styles for dropdown menu icon buttons */
+.menu-item .icon-button {
+  margin-right: 0.5rem;
+}
+.menu-item .icon-button:hover {
+  filter: none;
+}
+.menu-item:hover {
+  background-color: #525357;
+}
+/* Styles for CSSTransition classes */
+.menu-primary-enter {
+  position: absolute;
+  transform: translateX(-110%);
+}
+.menu-primary-enter-active {
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+.menu-primary-exit {
+  position: absolute;
+}
+.menu-primary-exit-active {
+  transform: translateX(-110%);
+  transition: all var(--speed) ease;
+}
+.menu-secondary-enter {
+  transform: translateX(110%);
+}
+.menu-secondary-enter-active {
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+.menu-secondary-exit-active {
+  transform: translateX(110%);
+  transition: all var(--speed) ease;
+}
+/* ***************************************************** */
+/*                                                       */
+/*                 NAVBAR CLASS END                      */
+/*                                                       */
+/* ***************************************************** */
+
+/* Add this to your existing App.css */
+.container {
+  max-width: 1440px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Styles for section headings */
+.section-heading {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* Styles for section text */
+.section-text {
+  text-align: center;
+  font-size: 18px;
+  max-width: 80%; /* Set max width for better readability */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Styles for italicized description text */
+.description-text {
+  font-style: italic;
+  text-align: center;
+  color: #fff;
+  max-width: 80%; /* Set max width for better readability */
+}
+
+/* Styles for book now button */
+.book-now-btn {
+  justify-content: center; /* Center content horizontally */
+  background-color: #FEAE00;
+  border: none;
+  height: 10px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 80vw; /* Set minimum width */
+  overflow: hidden;
+  display: flex; /* Use flexbox to align content */
+  flex-direction: column;
+  align-items: center;
+}
+/* Styles for image container */
+.image-container {
+  display: flex;
+  margin-top: 20px;
+  padding: 0px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  max-height: 150px;
+  object-fit: contain; /* Resize image to fit container */
+}
+
+.separator-image {
+  max-width: 100%;
+  max-height: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.small-image {
+  height: 48px;
+  padding: 10px;
+  margin: 0 3px;
+}
+
+.price-image {
+  height: 72px;
+  padding: 10px;
+  margin: 0 3px;
+}
+
+.images-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+

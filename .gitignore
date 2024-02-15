@@ -1,0 +1,2 @@
+// To prevent node_modules folder dependencies to get added to repository.
+node_modules/

@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://admin:3%40glenation@cluster1.gihs7el.mongodb.net/moosedb",
+    "jwtSecret": "secrettokenpassword"
+}
